@@ -7,66 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold:         #c9a84c;
-    --gold-dim:     #8a6f2e;
-    --gold-glow:    rgba(201,168,76,0.20);
-    --gold-subtle:  rgba(201,168,76,0.07);
-    --blood:        #8b1a1a;
-    --blood-bright: #c02020;
-    --surface:      #0d0b09;
-    --surface2:     #141210;
-    --surface3:     #1c1916;
-    --surface4:     #26221e;
-    --text:         #e8dcc8;
-    --text-dim:     #9a8870;
-    --text-muted:   #5c5040;
-    --border-gold:  rgba(201,168,76,0.28);
-    --border-dim:   rgba(201,168,76,0.10);
-    --radius:       4px;
-    --radius-lg:    8px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; }
-  body {
-    font-family: 'Crimson Pro', Georgia, serif;
-    background: var(--surface);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-image:
-      radial-gradient(ellipse 90% 50% at 50% 0%, rgba(139,26,26,0.10) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.022'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  h1, h2, h3, .cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
+  /* @siege-ux-inject */
 
-  /* ── Header ── */
-  header {
-    border-bottom: 1px solid var(--border-gold);
-    background: var(--surface2);
-    box-shadow: 0 2px 24px rgba(0,0,0,0.5);
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .site-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .site-title .cross { color: var(--gold-dim); font-size: 1rem; }
+  /* ── Page-specific styles (not in shared library) ── */
 
-  /* ── Main Content ── */
   main {
     flex: 1;
     display: flex;
@@ -237,24 +181,11 @@
     transform: translateX(0);
   }
 
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--border-dim);
-    font-family: 'Crimson Pro', serif;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-style: italic;
-  }
-
-  /* ── Animations ── */
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── Responsive ── */
   @media (max-width: 560px) {
     .tools-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2rem; }
@@ -294,7 +225,7 @@
       <a class="tool-card" href="https://battle.siegeperilous.net" target="_blank" rel="noopener">
         <span class="tool-icon">⚔</span>
         <span class="tool-name">Battle Assistant</span>
-        <span class="tool-desc">Track Command points, models destoyed, wounds, and other resources during play. Import your armies from Army Builder to get get probabilistic attack recommendations and full 5-round combat simulations. </span>
+        <span class="tool-desc">Track Command points, models destroyed, wounds, and other resources during play. Import your armies from Army Builder to get probabilistic attack recommendations and full 5-round combat simulations.</span>
         <span class="tool-url">battle.siegeperilous.net</span>
       </a>
 
